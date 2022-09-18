@@ -1,51 +1,75 @@
-import java.util.Arrays;
-
 public class Main {
+
     public static void main(String[] args) {
-        int[] weights = new int[3];
-        weights[0] = 1;
-        weights[1] = 2;
-        weights[2] = 3;
-        int firstWeight = weights[0];
-        int secondWeight = weights[1];
-        int thirdWeight = weights[2];
-        System.out.println(Arrays.toString(weights));
+        int[] array1 = new int[3];
+        array1[0] = 1;
+        array1[1] = 2;
+        array1[2] = 3;
+
+        double[] array2 = {1.57, 7.654, 9.986};
+
+        int[] myArray = new int[5];
+        myArray[0] = 7;
+        myArray[1] = 77;
+        myArray[2] = 777;
+        myArray[3] = 7777;
+        myArray[4] = 77777;
 
 
-        double[] doubleValues = {1.57, 7.654, 9.986};
-        System.out.println(Arrays.toString(doubleValues));
-
-        int[] speeds = new int[] {10, 20, 40, 70, 110};
-        System.out.println(Arrays.toString(speeds));
-
-        int[] reverse = new int[weights.length];
-        int count = 0;
-        for (int i = 1; i <= weights.length; i++) {
-            reverse[count++] = weights[weights.length - i];
-        }
-        System.out.println(Arrays.toString(reverse));
-
-
-        int length = 0;
-        for (double element : doubleValues)
-        {
-            length++;
-        }
-        for (int i = length - 1; i >= 0; i--)
-        {
-            System.out.print(doubleValues[i] + ", ");
-        }
-
-
-        for(int u=0, j = 1; u<weights.length; u++){
-            if( weights[u]%2 ==0) {
-                System.out.println(weights[u]);
-            }  else {
-                System.out.println(weights[u] + j);
+        for (int i = 0; i < array1.length; i++) {
+            System.out.print(array1[i]);
+            if (i != array1.length - 1) {
+                System.out.print(", ");
             }
-
         }
+        System.out.println();
+        for (int i = 0; i < array2.length; i++) {
+            System.out.print(array2[i]);
+            if (i != array2.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.print(myArray[i]);
+            if (i != myArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
 
+        for (int i = array1.length-1; i>=0; i--) {
+            System.out.print(array1[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        for (int i = array2.length-1; i>=0; i--) {
+            System.out.print(array2[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        for (int i = myArray.length-1; i>=0; i--) {
+            System.out.print(myArray[i]);
+            if (i != 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] % 2 == 1) {
+                array1[i]++;
+            }
+            System.out.print(array1[i]);
+            if (i != array1.length - 1) {
+                System.out.print(", ");
+            }
+        }
 
         }
 
